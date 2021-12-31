@@ -1,0 +1,21 @@
+body {
+  /*整体居中*/
+  content: "";
+  width: 900px;
+  margin: 0 auto;
+  height: 0 auto;
+  background: transparent url(https://wallroom.io/img/2560x1600/bg-79cb16d.jpg);
+  background-size: cover;
+}
+.warp {
+  /*父级盒子*/
+  width: 900px;
+  height: 768px;
+  color: #87cefa;
+  position: relative;
+}
+h1 {
+  font-family: "华文行楷";
+  font-size: 50px;
+  color: rgb(255, 252, 59);
+}

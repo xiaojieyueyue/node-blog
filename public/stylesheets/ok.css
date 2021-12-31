@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(200deg,rgba(3, 192, 225, 0.686),#ffb005a4);
+}
+.loading{
+    width: 86px;
+    height: 196px;
+    /*xiangduidingwei*/
+    position: relative;
+    display: flex;
+    /*元素垂直*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+}
+.top,.bottom{
+    width: 70px;
+    height: 70px;
+    border-style: solid;
+    border-color: rgb(159, 234, 247);
+    border-width: 4px 4px 12px 12px;
+    border-radius: 50% 100% 50% 30%;
+    position: relative;
+    overflow: hidden;
+}
+.top{
+    transform: rotate(-45deg);
+}
+.bottom{
+    transform: rotate(135deg);
+}
+.top::before,
+.bottom::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(233, 33, 110, 0.652);
+    animation: 2s linear infinite;
+}
+.top::before{
+    border-radius: 0 100% 0 0;
+    animation-name: drop-sand;
+}
+.bottom::before{
+    border-radius: 0 0 0 25%;
+    transform: translate(50px,-50px);
+    animation-name: fill-sand;
+}
+/*向下流动元素*/
+.loading::after{
+    content: "";
+    width: 5px;
+    height: 96px;
+    background-color: rgba(233, 33, 110, 0.385);
+    position:absolute;
+    top: 20px;
+    
+    animation: flow 2s linear infinite;
+}
+
+@keyframes drop-sand{
+    to{
+        transform:translate(-50px,50px);
+    }
+}
+@keyframes fill-sand{
+    to{
+        transform:translate(0,0);
+    }
+}
+@keyframes flow{
+    10%,100%{
+        transform:translateY(64px);
+    }
+}
+#time {
+    color: rgb(0, 30, 255);
+  }
