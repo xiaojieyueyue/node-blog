@@ -1,0 +1,138 @@
+body {
+  background: url("http://static.simpledesktops.com/uploads/desktops/2019/03/04/zurich.png.625x385_q100.png")
+    no-repeat;
+  background-size: 100%;
+}
+
+#reg_box {
+  width: 20%;
+  height: 0 auto;
+  background-color: #0e81ec60;
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px 50px;
+}
+
+h2 {
+  color: #06e4d990;
+  margin-top: 5%;
+}
+
+#input-box {
+  margin-top: 5%;
+}
+
+span {
+  color: #fff;
+}
+
+input {
+  border: 0;
+  width: 60%;
+  font-size: 15px;
+  color: rgb(15, 170, 131);
+  background: transparent;
+  border-bottom: 2px solid rgb(0, 172, 92);
+  padding: 5px 10px;
+  outline: none;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 50px;
+  width: 60%;
+  height: 30px;
+  border-radius: 10px;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  background-image: linear-gradient(to right, #30cfd0, #330867);
+}
+
+#sign_up {
+  margin-top: 45%;
+  margin-left: 60%;
+}
+
+a {
+  color: #8a1a1b;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.button {
+  margin-top: 50px;
+  width: 60%;
+  height: 30px;
+  border-radius: 10px;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #30cfd0, #330867);
+}
+/*侧边栏选择器*/
+.sidenav {
+  height: 100%;
+  width: 0; /*原始宽度*/
+  position: fixed;
+  /*z-index、top、left共同控制侧栏的悬浮（上方1，下方-1）*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /*侧栏延迟0.5s显示*/
+  padding-top: 60px;
+}
+
+/*侧边栏标签选择器*/
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; /*标签延迟0.3s显示*/
+}
+
+/*侧栏标签和关闭按钮光标的效果*/
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+/*侧栏和关闭按钮的位置选择器*/
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*主体内容*/
+#main {
+  transition: margin-right 0.5s; /*主体内容延迟0.5s整体y移动*/
+  padding: 16px;
+}
+
+/*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+h1 {
+  color: blanchedalmond;
+}

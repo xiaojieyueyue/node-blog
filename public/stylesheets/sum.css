@@ -1,0 +1,116 @@
+body {
+  /*整体居中*/
+  content: "";
+  width: 900px;
+  margin: 0 auto;
+  height: 0 auto;
+  background: transparent
+    url(https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+}
+.warp {
+  /*父级盒子*/
+  width: 900px;
+  height: 768px;
+  color: #87cefa;
+  position: relative;
+}
+h4 {
+  color: black;
+}
+
+/*注册*/
+.bgimg {
+  width: 100%;
+  height: 100%;
+  /*border: 2px red solid;*/
+  position: absolute;
+  z-index: -1;
+}
+.bodytop {
+  width: 100%;
+  height: 80px;
+  /*border: 2px red solid;*/
+  text-align: center;
+}
+
+.registerleft {
+  width: 37.5%;
+  float: left;
+  /*border: 2px red solid;*/
+}
+
+.registerright {
+  width: 58%;
+  float: left;
+  /*border: 2px red solid;*/
+}
+
+.register {
+  width: 40%;
+  padding: 15px;
+}
+.registerbtn {
+  width: 44%;
+  padding: 15px;
+  background-color: #ff0000;
+}
+
+/*侧边栏选择器*/
+.sidenav {
+  height: 100%;
+  width: 0; /*原始宽度*/
+  position: fixed;
+  /*z-index、top、left共同控制侧栏的悬浮（上方1，下方-1）*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /*侧栏延迟0.5s显示*/
+  padding-top: 60px;
+}
+
+/*侧边栏标签选择器*/
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; /*标签延迟0.3s显示*/
+}
+
+/*侧栏标签和关闭按钮光标的效果*/
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+/*侧栏和关闭按钮的位置选择器*/
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*主体内容*/
+#main {
+  transition: margin-right 0.5s; /*主体内容延迟0.5s整体y移动*/
+  padding: 16px;
+}
+
+/*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+h1 {
+  color: blanchedalmond;
+}
