@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>小杰简易博客</title>
+    <script src="/javascripts/index.js" type="text/javascript"></script>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box"><img src="img/logo.png"></div>
+      <div class="box1">
+          <div id="mySidenav" class="sidenav" >
+              <a herf="javascript:viod(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">&darr;快捷浏览&darr;</a>
+              <a href="reg">注册</a>
+              <a href="game">2048游戏</a>
+              <a href="updata">修改用户资料</a>
+              <a href="p1">行走人生</a>
+              <a href="perusal">个人博客主页</a>
+              </div>
+              <div id="main">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+              </div>
+      </div>
+      <!--<div class="div-line">分割线</div>-->
+      <div class="box2">
+          <div class="container">
+          <div class="tab-menu"> 
+          <li class="reg"><a href="reg" style="--i:1">注册</a></li>
+          <li><a href="login" style="--i:2">登录</a></li>
+          <li><a href="#" style="--i:3">右上角快捷键</a></li>
+          </div></div>
+      </div>
+              <div>
+                    </div>
+                    <div class="box3"><p class="h1">欢迎来到小杰的空间</p>
+                      <br><br><br><br><br><br><br>
+                      <p class="h1">展望未来</p>
+                    </div>
+</div>
+      
+<script src="https://libs.baidu.com/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.tab-menu li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+//          $('.tab-top li').eq($(this).index()).addClass('active').siblings().removeClass('active');  tab按钮第二种写法
+            var index=$(this).index();
+            $(".tab-con div").eq(index).show().siblings().hide();
+        })
+    })
+</script>
+  </body>
+</html>

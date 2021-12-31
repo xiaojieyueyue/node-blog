@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏</title>
+    <link rel='stylesheet' href='/stylesheets/2048.css' />
+</head>
+<body>
+  <h2 align="center"><%= r %></h2>
+    <div id="game" class="game">
+        <div class="game-score"><%= p %>：<span id="game_score">0</span></div>
+        <div id="game_container" class="game-container">
+          <div id="game_over" class="game-over game-hide">
+            <div class="game-over-info">
+              <div id="game_over_info"></div>
+              <span id="game_restart"><%= remaker %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 align="center"><a href="perusal">返回</a></h1>
+      <script src="/javascripts/jquery-1.12.4.min.js"></script>
+      <script src="/javascripts/Game2048.js"></script>
+      <script>
+        Game2048({prefix: 'game', len: 4, size: 100, margin: 20});
+      </script>
+</body>
+</html>
