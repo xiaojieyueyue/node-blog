@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <script src="/javascripts/login.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav" >
+    <a herf="javascript:viod(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">&darr;快捷浏览&darr;</a>
+    <a href="http://localhost:3000">主页</a>
+    </div>
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+    </div>
+    <form action="/login" method="post" onsubmit="return check()">
+        <div id="login_box">
+            <h2>LOGIN</h2>
+            <div id="input_box">
+              <input type="text" id="lname" name="name" placeholder="请输入用户名">
+            </div>
+            <div class="input_box">
+              <input type="password" id="lpass" name="password" placeholder="请输入密码">
+            </div>
+            <input type="submit" name="submit" class="button" value="登录"><br>
+    </form>
+<button class="button"><a href="reg">去注册</a></button>
+</body>
+</html>
