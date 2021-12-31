@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改成功</title>
+    <link rel='stylesheet' href='/stylesheets/ok.css' />
+</head>
+<body>
+    <div class="loading">
+        <span class="top"></span>
+        <span class="bottom"></span>
+    </div><h1>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;修改成功
+    <span id="time">
+        3
+    </span>秒后跳转登录,如无反应
+    <a href="login">
+        点击这里
+    </a></h1>
+</body>
+<script>
+    function countDown(){
+        //获取初始时间
+        var time = document.getElementById("time");
+        
+        //获取到id为time标签中的数字时间
+        if(time.innerHTML == 0){
+            //等于0时清除计时，并跳转该指定页面
+            window.location.href="login";
+        }else{
+            time.innerHTML = time.innerHTML-1;
+        }
+    }
+    //1000毫秒调用一次
+    window.setInterval("countDown()",1000);
+</script>
+</html>

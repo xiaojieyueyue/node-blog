@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel='stylesheet' href='/stylesheets/reg.css' />
+    <script src="/javascripts/reg.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav" >
+    <a herf="javascript:viod(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">&darr;快捷浏览&darr;</a>
+    <a href="http://localhost:3000">主页
+    </a>
+    </div>
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+    </div>
+    <form action="/reg" method="post" onsubmit="return checke()">
+        <div id="reg_box">
+            <h2>REG</h2>
+            <div id="input_box">
+              <input type="text" id="regname" name="name" placeholder="请输入用户名" onblur="checkname()">
+              <br><span id="prompt1" style="color:red;"></span>
+            </div>
+            <div class="input_box">
+              <input type="password" id="regpsd" name="password" placeholder="请输入密码" onblur="checkpsd1()">
+              <br><span id="prompt2" style="color:red;"></span>
+            </div>
+            <div class="input_box">
+                <input type="email" id="regemail"  name="email" placeholder="请输入邮箱" onblur="checkemail()">
+                <br><span id="prompt4" style="color:red;"></span>
+              </div>
+              <div class="input_box">
+                <input type="birthday" name="birthday" placeholder="请输入生日(*可空)">
+              </div>
+              <div class="input_box">
+                <input type="sex" name="sex" placeholder="请输入性别（*可空）">
+              </div>
+              <input type="submit" name="submit" class="button" value="注册"><br>
+    </form>
+    <button class="button"><a href="login">去登录</a></button>
+</body>
+</html>
