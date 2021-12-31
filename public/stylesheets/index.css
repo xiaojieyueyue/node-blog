@@ -1,0 +1,251 @@
+* {
+  /*初始化*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1366px;
+  margin: 0 auto;
+  height: 0 auto;
+  background-image: url(../img/5.png);
+  /*border:1px solid black;*/
+  background-size: cover;
+}
+.wrap {
+  width: 1366px;
+  height: 200px;
+  /*background-color: lightskyblue;*/
+  position: relative;
+}
+.box {
+  width: 100px;
+  height: 40px;
+  /*background-color: hotpink;*/
+  position: absolute;
+}
+.box1 {
+  width: 100px;
+  height: 20px;
+  /*background-color: hotpink;*/
+
+  float: right;
+}
+.div-line {
+  /*分割线*/
+  width: 1366px;
+  height: auto;
+  border: 1px solid;
+  top: 20px;
+  position: absolute;
+}
+.box2 {
+  width: 400px;
+  height: 600px;
+  /*background-color: hotpink;*/
+  position: absolute;
+  top: 45px;
+}
+.box3 {
+  width: 966px;
+  height: 600px;
+  /* background-color: cyan; */
+  position: absolute;
+  top: 150px;
+  left: 350px;
+}
+.h1 {
+  text-align: center;
+  font-family: 华文彩云;
+  font-size: 100px;
+}
+
+.container {
+  /*弹性布局*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*垂直排列*/
+  flex-direction: column;
+  /*100%高宽*/
+  width: 400px;
+  height: 600px;
+  /*背景渐变*/
+  background: radial-gradient(circle at center);
+}
+.container a {
+  /*相对定位*/
+  position: relative;
+  /*设置高宽要把a标签转为块级元素*/
+  display: block;
+  width: 140px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin: 40px;
+  color: plum;
+  text-decoration: none;
+  font-size: 30px;
+  /*动画过渡*/
+  transition: all 0.3s ease-in-out;
+  filter: hue-rotate(calc(var(--i) * 60deg));
+}
+.container a::before， .container a::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid plum;
+  /* 动画过渡 最后的0.3s是延迟时间*/
+  transition: all 0.3s ease-in-out 0.3s;
+}
+.container a::before {
+  top: 0;
+  left: 0;
+  /*删除左元素右，下边框*/
+  border-right: 0;
+  border-bottom: 0;
+}
+.container a::after {
+  right: 0;
+  bottom: 0;
+  /*删除右元素左，上边框*/
+  border-top: 0;
+  border-left: 0;
+}
+.container a:hover {
+  background-color: plum;
+  color: #000;
+  /*添加发光和倒影*/
+  box-shadow: 0 0 50px plum;
+  /*below是下倒影 1px是倒影和元素相隔的距离 最后是个渐变颜色*/
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, rgba(0, 0, 0, 0, 3));
+  /*延迟响应*/
+  transition-delay: 0.1s;
+}
+.container a:hover::before,
+.container a:hover::after {
+  width: 138px;
+  height: 58px;
+  transition-delay: 0s;
+}
+
+/*注册登录效果*/
+
+.tab-menu ul li {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+}
+
+.tab-con div {
+  width: 936px;
+  height: 568px;
+  /*background: #F2F2F2;
+  border: 1px solid #749dcf;*/
+  display: none;
+  padding: 15px;
+}
+.tab-con div:first-child {
+  display: block;
+}
+
+/*注册*/
+.bgimg {
+  width: 100%;
+  height: 100%;
+  /*border: 2px red solid;*/
+  position: absolute;
+  z-index: -1;
+}
+.bodytop {
+  width: 100%;
+  height: 80px;
+  /*border: 2px red solid;*/
+  text-align: center;
+}
+
+.registerleft {
+  width: 37.5%;
+  float: left;
+  /*border: 2px red solid;*/
+}
+
+.registerright {
+  width: 58%;
+  float: left;
+  /*border: 2px red solid;*/
+}
+
+.register {
+  width: 40%;
+  padding: 15px;
+}
+.registerbtn {
+  width: 44%;
+  padding: 15px;
+  background-color: #ff0000;
+}
+
+/*侧边栏选择器*/
+.sidenav {
+  height: 100%;
+  width: 0; /*原始宽度*/
+  position: fixed;
+  /*z-index、top、left共同控制侧栏的悬浮（上方1，下方-1）*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /*侧栏延迟0.5s显示*/
+  padding-top: 60px;
+}
+
+/*侧边栏标签选择器*/
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; /*标签延迟0.3s显示*/
+}
+
+/*侧栏标签和关闭按钮光标的效果*/
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+/*侧栏和关闭按钮的位置选择器*/
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*主体内容*/
+#main {
+  transition: margin-right 0.5s; /*主体内容延迟0.5s整体y移动*/
+  padding: 16px;
+}
+
+/*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
